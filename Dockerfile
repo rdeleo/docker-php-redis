@@ -31,7 +31,7 @@ RUN echo "extension=/etc/phpredis/modules/redis.so" > /etc/php/7.0/cli/conf.d/10
 #@TODO: EDIT THE STATIC USER ID 1000 DO $UID
 RUN usermod -u 1000 www-data
 
-COPY ./env/prod/CmilePhpApiContainers/$fileConf /etc/apache2/sites-available/000-default.conf
+COPY ./$fileConf /etc/apache2/sites-available/000-default.conf
 
 # Configure localhost in Apache
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
